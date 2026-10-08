@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="./JS/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pricing Calculator</h1>
+      <p>Calculate your final price instantly</p>
+    </header>
+    <main>
+      <section class="calculator-card">
+        <section class="calculator-inputs">
+          <h2>Calculator Inputs</h2>
+          <hr />
+          <form>
+            <div class="form-group">
+              <label for="unit-price">Unit Price</label>
+              <input
+                type="number"
+                name="unit-price"
+                id="unit-price"
+                min="0"
+                step="0.01"
+              />
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input
+                type="number"
+                name="quantity"
+                id="quantity"
+                min="1"
+                step="1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="tax-rate">Tax Rate</label>
+              <input
+                type="number"
+                name="tax-rate"
+                id="tax-rate"
+                min="0"
+                max="100"
+                step="0.01"
+              />
+            </div>
+          </form>
+        </section>
+        <section class="calculator-summary">
+          <h2>Price Summary</h2>
+          <hr />
+          <div class="summary-list">
+            <div class="summary-group">
+              <span>Subtotal</span>
+              <output id="subtotal"></output>
+            </div>
+            <div class="summary-group">
+              <span>Discount</span>
+              <output id="discount"></output>
+            </div>
+            <div class="summary-group">
+              <span>Tax</span>
+              <output id="tax"></output>
+            </div>
+            <hr />
+            <div class="summary-group total">
+              <span>Total Price</span>
+              <output id="total"></output>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
